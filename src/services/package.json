@@ -3,11 +3,12 @@
   "version": "1.0.0",
   "description": "make magic",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "test": "get customer"
   },
   "repository": {
-    "type": "module",
+    "type": "git",
     "url": "git+https://github.com/CedricxxxA/WebDevelopmentWorkshop.git"
   },
   "author": "Ich",

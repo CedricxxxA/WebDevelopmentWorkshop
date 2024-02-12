@@ -1,1 +1,3 @@
-console.log("Hello World");
+import { GetAllCustomers } from "./customers.js";
+
+console.log(GetAllCustomers());
