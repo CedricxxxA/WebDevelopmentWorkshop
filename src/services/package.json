@@ -1,0 +1,19 @@
+{
+  "name": "customer-number-server",
+  "version": "1.0.0",
+  "description": "make magic",
+  "main": "index.js",
+  "scripts": {
+    "test": "get customer"
+  },
+  "repository": {
+    "type": "module",
+    "url": "git+https://github.com/CedricxxxA/WebDevelopmentWorkshop.git"
+  },
+  "author": "Ich",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CedricxxxA/WebDevelopmentWorkshop/issues"
+  },
+  "homepage": "https://github.com/CedricxxxA/WebDevelopmentWorkshop#readme"
+}
