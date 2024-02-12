@@ -7,6 +7,7 @@ const customer = class {
         this.Projekt = Projekt
     }
 }
+const pattern = /^KN-\d{2}-\d{2}-\d{2}$/;
 
 const customerList = [];
 
@@ -38,5 +39,15 @@ export function DeleteCustomer(kundennr) {
 export function GetCustomerById(kundennr) {
     const customer = customerList.filter((c) => c.KundenNummer === kundennr);
     return customer;
+}
+
+export function ValidateCustomerNumber(customerNumber){
+    if (pattern.test(customerNumber)) {
+        console.log("String matches the pattern");
+        return true;
+      } else {
+        console.log("String does not match the pattern");
+        return false;
+      }
 }
 
