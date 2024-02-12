@@ -18,10 +18,10 @@ export function GetAllCustomers(){
     return customerList;
 }
 
-// export function CreateCustomer(KundenNummer, Vorname, Nachname, Firma, Projekt){
-//     let newCustomer = new customer(KundenNummer, Vorname, Nachname, Firma, Projekt);
-//     customerList.push(newCustomer);
-// }
+export function CreateCustomer(KundenNummer, Vorname, Nachname, Firma, Projekt){
+    let newCustomer = new customer(KundenNummer, Vorname, Nachname, Firma, Projekt);
+    customerList.push(newCustomer);
+}
 
 export function DeleteCustomer(kundennr) {
     const indexToDelete = customerList.findIndex(customer => customer.KundenNummer === kundennr);
