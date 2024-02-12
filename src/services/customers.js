@@ -56,3 +56,8 @@ export function ValidateCustomerInList(kundennr) {
     return hasCustomer;
 }
 
+export async function routes (fastify, options) {
+    fastify.get('/', async (request, reply) => {
+        // do something ´
+    });
+}
