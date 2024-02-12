@@ -51,3 +51,8 @@ export function ValidateCustomerNumber(customerNumber){
       }
 }
 
+export function ValidateCustomerInList(kundennr) {
+    const  hasCustomer = customerList.some((customer) => customer.KundenNummer === kundennr);
+    return hasCustomer;
+}
+
