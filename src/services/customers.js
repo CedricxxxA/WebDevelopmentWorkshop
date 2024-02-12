@@ -32,3 +32,9 @@ export function DeleteCustomer(kundennr) {
         console.log(`Kunde mit der Kundennummer ${kundennr} wurde nicht gefunden.`);
     }
 }
+
+export function GetCustomerById(kundennr) {
+    const customer = customerList.filter((c) => c.KundenNummer === kundennr);
+    return customer;
+}
+
