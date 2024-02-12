@@ -18,19 +18,21 @@ export function GetAllCustomers(){
     return customerList;
 }
 
-export function CreateCustomer(KundenNummer, Vorname, Nachname, Firma, Projekt){
-    let newCustomer = new customer(KundenNummer, Vorname, Nachname, Firma, Projekt);
-    customerList.push(newCustomer);
-}
+// export function CreateCustomer(KundenNummer, Vorname, Nachname, Firma, Projekt){
+//     let newCustomer = new customer(KundenNummer, Vorname, Nachname, Firma, Projekt);
+//     customerList.push(newCustomer);
+// }
 
 export function DeleteCustomer(kundennr) {
     const indexToDelete = customerList.findIndex(customer => customer.KundenNummer === kundennr);
+    const customer = customerList[indexToDelete];
     if (indexToDelete !== -1) {
         customerList.splice(indexToDelete, 1);
         console.log(`Kunde mit der Kundennummer ${kundennr} wurde gelöscht.`);
     } else {
         console.log(`Kunde mit der Kundennummer ${kundennr} wurde nicht gefunden.`);
     }
+    return customer;
 }
 
 export function GetCustomerById(kundennr) {
