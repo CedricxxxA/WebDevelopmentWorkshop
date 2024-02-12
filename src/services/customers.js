@@ -7,6 +7,23 @@ const customer = class {
         this.Projekt = Projekt
     }
 }
+
+const customerSchema = {
+    schema: {
+      body: {
+        type: 'object',
+        properties: {
+          KundenNummer: { type: 'string' },
+          Vorname: { type: 'string'},
+          Nachname: { type: 'string' },
+          Firma: {type: 'string'},
+          Projekt: {type: 'string'}
+        },
+        required: ['name', 'description', 'id']
+      }
+    }
+  }
+
 const pattern = /^KN-\d{2}-\d{2}-\d{2}$/;
 
 const customerList = [];
@@ -59,5 +76,17 @@ export function ValidateCustomerInList(kundennr) {
 export async function routes (fastify, options) {
     fastify.get('/', async (request, reply) => {
         // do something ´
+    });
+    fastify.get('/customers', async (request, reply) => {
+        return GetAllCustomers();
+    });
+    fastify.get('/customers/:Id', async (request, reply) => {
+        return GetCustomerById(request.params.Id);
+    });
+    fastify.post('/customers', customerSchema, async (request, reply) => {
+        CreateCustomer(request.body);
+    });
+    fastify.delete('/customers/:Id', async (request, reply) => {
+        DeleteCustomer(request.params.Id);
     });
 }

@@ -1,5 +1,5 @@
 import  Fastify  from "fastify";
-import { DeleteCustomer, GetAllCustomers, GetCustomerById, CreateCustomer, routes } from "./customers.js";
+import { DeleteCustomer, GetAllCustomers, CreateCustomer, routes } from "./customers.js";
 
 CreateCustomer("KN-55-00-00","Spongebob","Schwammkopf","Krosse Krabbe", "Krabbenburger");
 CreateCustomer("KN-56-00-00","Patrik","Star","Arbeitsamt", "Arbeitslos");
