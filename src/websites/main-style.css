@@ -21,6 +21,22 @@
   border-style: solid;
   border-color: white;
 }
+.CustomerCard{
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px;
+  background-color: var(--primary-color);
+  margin: 20px;
+  flex: 1;
+  border: 1px solid #ccc;
+  padding: 20px;
+  flex-direction: column;
+  border-radius: 10px;
+  max-width: 25%;
+  font-weight: bold;
+  height: 75%;
+  vertical-align: auto;
+}
 
   body {
     font-family: Arial, sans-serif;
@@ -43,16 +59,22 @@
   .mainContainer {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
-    padding: 10px;
+    padding: 1rem;
   }
+p{
+  color: white;
+}
 
+input{
+  height: 2em;
+  border-radius: 8px;
+}
   .customerList {
     display: flex;
     flex-wrap: wrap;
     padding: 20px;
     background-color: var(--primary-color);
-    margin: 20px;
+    margin: 0.5em;
     flex: 1;
     border: 1px solid #ccc;
     padding: 20px;
@@ -79,6 +101,23 @@
     max-height: 4em;
     display: flex;
     align-items: center;
+  }
+
+  .inputItem{
+    background-color: var(--background-color);
+    color: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+    flex: 1 1;
+    box-sizing: border-box;
+    border-radius: 10px;
+    box-shadow: 0px 5px 20px black;
+    max-height: 4em;
+    display: flex;
+    align-items: center;
+    max-width: 100%;
+    gap: 1em;
+    justify-content: right;
   }
 
   /* .grid-container {
