@@ -18,6 +18,11 @@ export function GetAllCustomers(){
     return customerList;
 }
 
+export function GetCustomerById(kundennr) {
+    const customer = customerList.filter((c) => c.KundenNummer === kundennr);
+    return customer;
+}
+
 export function DeleteCustomer(kundennr) {
     const indexToDelete = customerList.findIndex(customer => customer.KundenNummer === kundennr);
     if (indexToDelete !== -1) {
