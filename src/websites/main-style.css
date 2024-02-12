@@ -65,6 +65,20 @@ p{
   color: white;
 }
 
+.smallContainer{
+  display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+    background-color: var(--primary-color);
+    margin: 0.5em;
+    flex: 1;
+    border: 1px solid #ccc;
+    flex-direction: column;
+    border-radius: 10px;
+    max-width: 25%;
+    height: 25%;
+}
+
 input{
   height: 2em;
   border-radius: 8px;
