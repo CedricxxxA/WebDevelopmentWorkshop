@@ -6,6 +6,22 @@
     --grid-background-color: #f9f9f9;
   }
   
+.NewButton{
+  text-align: center;
+  background-color: var(--secondary-color);
+  color: white;
+  border-radius: 8px;
+  box-shadow: 0px 5px 20px black;
+  max-height: 4em;
+  height: 3em;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+.NewButton:hover{
+  border-style: solid;
+  border-color: white;
+}
+
   body {
     font-family: Arial, sans-serif;
     margin: 0;
