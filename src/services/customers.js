@@ -18,8 +18,7 @@ const customerSchema = {
           Nachname: { type: 'string' },
           Firma: {type: 'string'},
           Projekt: {type: 'string'}
-        },
-        required: ['name', 'description', 'id']
+        }
       }
     }
   }
@@ -36,9 +35,16 @@ export function GetAllCustomers(){
     return customerList;
 }
 
-export function CreateCustomer(KundenNummer, Vorname, Nachname, Firma, Projekt){
-    let newCustomer = new customer(KundenNummer, Vorname, Nachname, Firma, Projekt);
+export function CreateCustomer(Vorname, Nachname, Firma, Projekt){
+
+let newKnNr = `KN-${Rnd()}${Rnd()}-${Rnd()}${Rnd()}-${Rnd()}${Rnd()}`
+    let newCustomer = new customer(newKnNr, Vorname, Nachname, Firma, Projekt);
     customerList.push(newCustomer);
+    return newCustomer;
+}
+
+function Rnd(){
+    return Math.floor(Math.random() * 10)
 }
 
 export function DeleteCustomer(kundennr) {
@@ -83,8 +89,9 @@ export async function routes (fastify, options) {
     fastify.get('/customers/:Id', async (request, reply) => {
         return GetCustomerById(request.params.Id);
     });
-    fastify.post('/customers', customerSchema, async (request, reply) => {
-        CreateCustomer(request.body);
+    fastify.post('/customers', async (request, reply) => {
+        debugger;
+        CreateCustomer(request.body.Vorname, request.body.Nachname, request.body.Firma, request.body.Projekt);
     });
     fastify.delete('/customers/:Id', async (request, reply) => {
         DeleteCustomer(request.params.Id);
