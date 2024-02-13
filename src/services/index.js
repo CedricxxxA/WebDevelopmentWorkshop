@@ -1,5 +1,8 @@
 import  Fastify  from "fastify";
+import cors from '@fastify/cors'
 import { DeleteCustomer, GetAllCustomers, CreateCustomer, routes } from "./customers.js";
+
+
 
 CreateCustomer("KN-55-00-00","Spongebob","Schwammkopf","Krosse Krabbe", "Krabbenburger");
 CreateCustomer("KN-56-00-00","Patrik","Star","Arbeitsamt", "Arbeitslos");
@@ -8,6 +11,10 @@ console.log(GetAllCustomers());
 
 const fastify = Fastify({
     logger: true
+  });
+
+  fastify.register(cors, {
+    origin: '*'
   });
 
 fastify.register(routes);
