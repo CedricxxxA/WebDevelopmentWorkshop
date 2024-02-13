@@ -5,21 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Customer Report Manager</title>
     <link rel="stylesheet" href="main-style.css" />
+    <script type="text/javascript" src="main.js"></script>
   </head>
   <body>
     <div class="headline">Kunden Dashboard</div>
     <div class="mainContainer">
       <div class="customerList">
         <button class="NewButton">NEW</button>
-        <div class="item">Doe | PlanB</div>
-        <div class="item">Doe | PlanB</div>
-        <div class="item">Doe | PlanB</div>
-        <div class="item">Doe | PlanB</div>
-        <div class="item">Doe | PlanB</div>
-        <div class="item">Doe | PlanB</div>
+        <div onclick="OpenCustCard()" class="item">Doe | PlanB</div>
+        <div onclick="OpenCustCard()" class="item">Doe | PlanB</div>
+        <div onclick="OpenCustCard()" class="item">Doe | PlanB</div>
+        <div onclick="OpenCustCard()" class="item">Doe | PlanB</div>
+        <div onclick="OpenCustCard()" class="item">Doe | PlanB</div>
+        <div onclick="OpenCustCard()" class="item">Doe | PlanB</div>
       </div>
 
-      <div class="CustomerCard">
+      <div id="CustCard" class="CustomerCard">
         <div class="inputItem">
           <p>Vorname</p>
           <input>
