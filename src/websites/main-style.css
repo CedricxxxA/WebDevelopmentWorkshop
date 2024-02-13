@@ -38,6 +38,54 @@
   vertical-align: auto;
 }
 
+.InfoItem {
+  background-color: var(--background-color);
+  color: #fff;
+  padding: 20px;
+  margin-bottom: 20px;
+  flex: 1;
+  box-sizing: border-box;
+  border-radius: 10px;
+  box-shadow: 0px 5px 20px black;
+  max-height: 4em;
+  display: flex;
+  align-items: center;
+}
+
+.CustomerInfo{
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px;
+  background-color: var(--primary-color);
+  margin: 20px;
+  flex: 1;
+  border: 1px solid #ccc;
+  padding: 20px;
+  flex-direction: column;
+  border-radius: 10px;
+  max-width: 25%;
+  font-weight: bold;
+  height: 75%;
+  vertical-align: auto;
+}
+
+.CustomerInfoInvis{
+  display: none;
+  flex-wrap: wrap;
+  padding: 20px;
+  background-color: var(--primary-color);
+  margin: 20px;
+  flex: 1;
+  border: 1px solid #ccc;
+  padding: 20px;
+  flex-direction: column;
+  border-radius: 10px;
+  max-width: 25%;
+  font-weight: bold;
+  height: 75%;
+  vertical-align: auto;
+}
+
 .CustomerCardInvis{
   display: none;
   flex-wrap: wrap;
