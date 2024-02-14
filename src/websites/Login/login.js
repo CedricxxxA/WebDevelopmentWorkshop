@@ -13,7 +13,7 @@ document.getElementById('login-form').addEventListener('submit', async function(
     user = validCustomer.KundenNummer;
     console.log(user);
     debugger;
-    window.location.href = 'C:\\Users\\DavidM\\source\\repos\\WebDevelopmentWorkshop\\src\\websites\\Dashboard\\dashboard.html';
+    window.location.href = '../Dashboard/dashboard.html';
   } else {
     document.getElementById('error-message').innerText = 'Ungültige Kundennummer. Bitte versuchen Sie es erneut.';
   }
