@@ -1,6 +1,7 @@
 import  Fastify  from "fastify";
 import cors from '@fastify/cors'
 import { DeleteCustomer, GetAllCustomers, CreateCustomer, routes } from "./customers.js";
+import { reportRoutes } from "./reports.js";
 
 
 
@@ -18,6 +19,7 @@ const fastify = Fastify({
   });
 
 fastify.register(routes);
+fastify.register(reportRoutes);
 
 // Run the server!
 try {

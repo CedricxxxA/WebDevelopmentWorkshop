@@ -1,3 +1,4 @@
+import { productList } from "./products.js";
 class Report {
     constructor(id, category, customerId, description, labels, owner, assignedTo, createdAt, editedAt, closedAt, state, priority, comments, closeReason, references) {
       this.id = id;
@@ -113,3 +114,22 @@ class Report {
     }]
   ));
   
+
+  export async function reportRoutes (fastify, options) {
+    fastify.get('/reports/customers/:CustId', async (request, reply) => {
+      return reportList.find(x => x.customerId === request.params.CustId)
+    });
+    fastify.get('/products/:ManagerId', async (request, reply) => {
+      return productList.find(x => x.productManager === request.params.ManagerId);
+    });
+    fastify.get('/products/:ProductId/reports', async (request, reply) => {
+      let reps;
+      let prod = productList.find(x => x.productId === request.params.ProductId);
+
+      prod.reports.forEach(element => {
+        reps.push(reportList.find(x => x.id === element));
+      });
+
+      return reps;
+    });
+}

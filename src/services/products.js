@@ -1,32 +1,36 @@
 class Product {
-    constructor(productId, productName, productManager, developer) {
+    constructor(productId, productName, productManager, developer, reports) {
         this.productId = productId;
         this.productName = productName;
         this.productManager = productManager;
         this.developer = developer;
+        this.reports = reports;
     }
 }
 
-const productList = [];
+export const productList = [];
 
 productList.push(new Product(
     "001",
     "Product A",
     "John Doe",
-    "Alice Smith"
+    "Alice Smith",
+    "1234"
   ));
   
   productList.push(new Product(
     "002",
     "Product B",
     "Jane Doe",
-    "Bob Johnson"
+    "Bob Johnson",
+    "1234"
   ));
   
   productList.push(new Product(
     "003",
     "Product C",
     "Emily Brown",
-    "David Wilson"
+    "David Wilson",
+    "4321"
   ));
   
