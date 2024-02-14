@@ -1,4 +1,8 @@
-let user = 'KN-00-00-02';
+var globalVariable={
+    user: ''
+ };
+
+function loadDashboard(){
 
 // Funktion zum Erstellen einer Kachel
 function createTile(data) {
@@ -27,7 +31,9 @@ function renderTiles(data) {
 
 async function fetchData() {
   try {
-    const response = await fetch(`http://127.0.0.1:3000/reports/customers/${user}`);
+
+    console.log(localStorage.getItem("User"))
+    const response = await fetch(`http://127.0.0.1:3000/reports/customers/${localStorage.getItem("User")}`);
     if (!response.ok) {
       throw new Error('Network response was not ok');
     }
@@ -48,3 +54,5 @@ function toggleReportForm() {
 document.getElementById('createReportBtn').addEventListener('click', toggleReportForm);
 
 fetchData();
+}
+document.addEventListener('DOMContentLoaded', loadDashboard());
