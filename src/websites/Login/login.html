@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link rel="stylesheet" href="login.css" />
+  </head>
+  <body>
+    <div class="headline">Login</div>
+    <div class="container">
+      <div class="login-container">
+        <form id="login-form">
+          <div class="form-group">
+            <label for="customerNumber">Kundennummer:</label>
+            <input
+              type="text"
+              id="customerNumber"
+              name="customerNumber"
+              required
+            />
+          </div>
+          <button type="submit">Login</button>
+        </form>
+        <div id="error-message" class="error-message"></div>
+      </div>
+    </div>
+
+    <script src="login.js"></script>
+  </body>
+</html>
