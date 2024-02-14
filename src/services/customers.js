@@ -34,7 +34,6 @@ customerList.push(new customer("KN-00-00-03", "Hans", "Wurst", "PlanB.", "Fanta"
 export function GetAllCustomers(){
     return customerList;
 }
-
 export function CreateCustomer(Vorname, Nachname, Firma, Projekt){
 
 let newKnNr = `KN-${Rnd()}${Rnd()}-${Rnd()}${Rnd()}-${Rnd()}${Rnd()}`
