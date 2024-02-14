@@ -41,7 +41,7 @@ class Report {
   reportList.push(new Report(
     "2412",
     "Feedback",
-    "1234",
+    "KN-00-00-02",
     "This is a description",
     ["label1", "label2"],
     "Product Manager",
@@ -68,7 +68,7 @@ class Report {
   reportList.push(new Report(
     "1234",
     "Bug",
-    "1234",
+    "KN-00-00-02",
     "Error message is not displayed",
     ["bug", "ui"],
     "QA Engineer",
@@ -95,7 +95,7 @@ class Report {
   reportList.push(new Report(
     "7890",
     "Feature Request",
-    "9012",
+    "KN-00-00-03",
     "Add dark mode feature",
     ["enhancement", "ui"],
     "UX Designer",

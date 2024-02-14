@@ -9,7 +9,27 @@
 <body>
   <div class="headline">Kunden Dashboard</div>
   <div class="container" id="dashboard">
-    <!-- Kacheln werden hier per JavaScript eingefügt -->
+</div>
+<button class="createReportBtn" id="createReportBtn">Create Report</button>
+  <div id="reportForm" class="hidden">
+    <!-- Formular für Berichtseingabe -->
+    <div class="report-form-box">
+      <label for="id">ID:</label>
+      <input type="text" id="id" name="id"><br><br>
+      <label for="category">Kategorie:</label>
+      <input type="text" id="category" name="category"><br><br>
+      <label for="description">Beschreibung:</label><br>
+      <textarea id="description" name="description"></textarea><br><br>
+      <label for="labels">Labels:</label>
+      <input type="text" id="labels" name="labels"><br><br>
+      <label for="owner">Owner:</label>
+      <input type="text" id="owner" name="owner"><br><br>
+      <label for="priority">Priorität:</label>
+      <input type="text" id="priority" name="priority"><br><br>
+      <label for="comments">Kommentare:</label>
+      <input type="text" id="comments" name="comments"><br><br>
+      <button class="createReportBtn" id="submitReportBtn">send</button>
+    </div>
   </div>
 
   <script src="dashboard.js"></script>

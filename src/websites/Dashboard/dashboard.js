@@ -1,4 +1,4 @@
-let user = 1234;
+let user = 'KN-00-00-02';
 
 // Funktion zum Erstellen einer Kachel
 function createTile(data) {
@@ -9,6 +9,8 @@ function createTile(data) {
     <p>_______________</p>
     <br>
     <p>${data.category}</p>
+    <br>
+    <p>${data.description}</p>
   `;
   return tile;
 }
@@ -29,11 +31,20 @@ async function fetchData() {
     if (!response.ok) {
       throw new Error('Network response was not ok');
     }
-    const data = await response.json();
+    let data = await response.json();
+    // Sort data based on createdAt in descending order
+    data.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
     renderTiles(data);
   } catch (error) {
     console.error('Error fetching data:', error);
   }
 }
+
+function toggleReportForm() {
+  const reportForm = document.getElementById('reportForm');
+  reportForm.classList.toggle('hidden');
+}
+
+document.getElementById('createReportBtn').addEventListener('click', toggleReportForm);
 
 fetchData();
