@@ -68,7 +68,7 @@ class Report {
   reportList.push(new Report(
     "1234",
     "Bug",
-    "5678",
+    "1234",
     "Error message is not displayed",
     ["bug", "ui"],
     "QA Engineer",
@@ -117,7 +117,7 @@ class Report {
 
   export async function reportRoutes (fastify, options) {
     fastify.get('/reports/customers/:CustId', async (request, reply) => {
-      return reportList.find(x => x.customerId === request.params.CustId)
+      return reportList.filter(x => x.customerId === request.params.CustId)
     });
     fastify.get('/products/:ManagerId', async (request, reply) => {
       return productList.find(x => x.productManager === request.params.ManagerId);
