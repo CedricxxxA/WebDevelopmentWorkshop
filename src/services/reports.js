@@ -35,3 +35,81 @@ class Report {
   }
     
   
+  const reportList = [];
+
+  reportList.push(new Report(
+    "2412",
+    "Feedback",
+    "1234",
+    "This is a description",
+    ["label1", "label2"],
+    "Product Manager",
+    "Jens Reiner",
+    "2020-01-01:12:00:00",
+    "2020-01-01:12:00:00",
+    "2020-01-01:12:00:00",
+    "Open",
+    1,
+    [{
+      author: "Jens Reiner",
+      message: "This is a comment",
+      createdAt: "2020-01-01:12:00:00",
+      type: 'developer',
+    }],
+    "This is a close reason",
+    [{
+      type: "github",
+      url: "",
+      issueNumber: 1
+    }]
+  ));
+  
+  reportList.push(new Report(
+    "1234",
+    "Bug",
+    "5678",
+    "Error message is not displayed",
+    ["bug", "ui"],
+    "QA Engineer",
+    "Anna Müller",
+    "2020-02-15:09:30:00",
+    "2020-02-15:10:45:00",
+    "",
+    "Open",
+    2,
+    [{
+      author: "Anna Müller",
+      message: "Confirmed the bug, needs fixing",
+      createdAt: "2020-02-15:10:45:00",
+      type: 'tester',
+    }],
+    "",
+    [{
+      type: "github",
+      url: "https://github.com/example/repository",
+      issueNumber: 2
+    }]
+  ));
+  
+  reportList.push(new Report(
+    "7890",
+    "Feature Request",
+    "9012",
+    "Add dark mode feature",
+    ["enhancement", "ui"],
+    "UX Designer",
+    "Max Mustermann",
+    "2020-03-20:14:00:00",
+    "",
+    "",
+    "Open",
+    1,
+    [],
+    "",
+    [{
+      type: "github",
+      url: "https://github.com/example/repository",
+      issueNumber: 3
+    }]
+  ));
+  
