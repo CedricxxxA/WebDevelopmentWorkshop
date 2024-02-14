@@ -84,6 +84,7 @@ export async function routes (fastify, options) {
         // do something ´
     });
     fastify.get('/customers', async (request, reply) => {
+        console.log(request.query.filter);
         return GetAllCustomers();
     });
     fastify.get('/customers/:Id', async (request, reply) => {
@@ -93,7 +94,7 @@ export async function routes (fastify, options) {
         debugger;
         CreateCustomer(request.body.Vorname, request.body.Nachname, request.body.Firma, request.body.Projekt);
     });
-    fastify.delete('/customers/:Id', async (request, reply) => {
+    fastify.delete('/customers/:Id/', async (request, reply) => {
         DeleteCustomer(request.params.Id);
     });
 }

@@ -22,6 +22,7 @@
   border-color: white;
 }
 .CustomerCard{
+  box-shadow: 10px 15px 20px black;
   display: flex;
   flex-wrap: wrap;
   padding: 20px;
@@ -39,6 +40,7 @@
 }
 
 .InfoItem {
+  box-shadow: 10px 15px 20px black;
   background-color: var(--background-color);
   color: #fff;
   padding: 20px;
@@ -53,6 +55,7 @@
 }
 
 .CustomerInfo{
+  box-shadow: 10px 15px 20px black;
   display: flex;
   flex-wrap: wrap;
   padding: 20px;
@@ -107,7 +110,8 @@
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: var(--background-color);
+    background-image: url("./assets/R.jpg");
+    background-size: 120%;
   }
 
   .headline {
@@ -120,12 +124,12 @@
     box-shadow: 0px 5px 20px black;
   }
 
-
   .mainContainer {
     display: flex;
     flex-wrap: wrap;
     padding: 1rem;
   }
+
 p{
   color: white;
 }
@@ -142,6 +146,7 @@ p{
     border-radius: 10px;
     max-width: 25%;
     height: 25%;
+    box-shadow: 10px 15px 20px black;
 }
 
 input{
@@ -162,6 +167,7 @@ input{
     max-width: 25%;
     font-weight: bold;
     height: 100vh;
+    box-shadow: 10px 15px 20px black;
   }
   
   .customerList :hover {
